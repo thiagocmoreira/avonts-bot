@@ -1,0 +1,21 @@
+{
+  "name": "avonts-bot",
+  "version": "1.0.0",
+  "description": "Avonts Bot",
+  "main": "index.js",
+  "module": "main.js",
+  "author": "Thiago Moreira",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "dotenv": "^6.2.0",
+    "esm": "^3.0.84"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
