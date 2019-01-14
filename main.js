@@ -10,7 +10,7 @@ fs.readdir('./events/', (err, files) => {
   files.forEach(file => {
     const eventHandler = require(`./events/${file}`)
     const eventName = file.split('.')[0]
-    client.on(eventName, arg => eventHandler(client, arg))
+    client.on(eventName, (...args) => eventHandler(client, ...args))
   })
 })
 
@@ -20,12 +20,9 @@ if (client.login(process.env.BOT_TOKEN)) {
   console.log('Erro ao conectar!')
 }
 
+
 // client.on('message', msg => {
 //   if (msg.content.includes('teste')) {
 //     msg.reply('FLÊ')
 //   }
-// })
-
-// client.on('guildMemberAdd', member => {
-//   member.send('Seja bem vindo ao Servidor!')
 // })

@@ -1,3 +1,4 @@
-export default client => {
-  console.log(`${client.user.tag} logado!`)
+
+module.exports = client => {
+  console.log(`${client.user.tag} está logado!`);
 }
