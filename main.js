@@ -1,6 +1,7 @@
 import fs from 'fs'
 import Discord from 'discord.js'
 import dotenv from 'dotenv'
+import http from 'http'
 
 dotenv.config()
 
@@ -20,9 +21,4 @@ if (client.login(process.env.BOT_TOKEN)) {
   console.log('Erro ao conectar!')
 }
 
-
-// client.on('message', msg => {
-//   if (msg.content.includes('teste')) {
-//     msg.reply('FLÊ')
-//   }
-// })
+http.createServer().listen(3000)
