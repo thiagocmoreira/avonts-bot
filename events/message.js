@@ -1,5 +1,8 @@
 module.exports = (client, message) => {
-  if (message.content.includes('teste')) {
-    message.reply('FLÊ')
+  let messageContent = message.content.toUpperCase()
+  console.log(messageContent)
+
+  if (messageContent.includes('PIT')) {
+    message.reply('Pitanga ta cansaaaaadoon passou o dia todo na ruuuuan')
   }
 }
