@@ -1,8 +1,13 @@
 module.exports = (client, message) => {
-  let messageContent = message.content.toUpperCase()
-  console.log(messageContent)
+  let isBot = message.author.bot
+  if (isBot) return
 
-  if (messageContent.includes('PIT')) {
+  let isDm = message.channelType === 'dm'
+  if (isDm) return
+
+  let messageContent = message.content.toUpperCase()
+
+  if (messageContent.includes('PIT') && !isBot) {
     message.reply('Pitanga ta cansaaaaadoon passou o dia todo na ruuuuan')
   }
 }
