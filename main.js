@@ -15,8 +15,7 @@ fs.readdir('./events/', (err, files) => {
   })
 })
 
-if (client.login(process.env.bot_token)) {
-// if (client.login(process.env.BOT_TOKEN)) {
+if (client.login(process.env.BOT_TOKEN)) {
   console.log('Conectado!')
 } else {
   console.log('Erro ao conectar!')
